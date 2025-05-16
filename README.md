@@ -143,9 +143,23 @@ Untuk melihat dashboard interaktif bisnis, ikuti langkah-langkah berikut:
 
 1. **Install dependencies** terlebih dahulu:
 
-```bash
-pip install -r requirements.txt
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-2. **Jalankan command** untuk run file streamlit
-```bash
-streamlit run app.py
+2. **Jalankan aplikasi Streamlit:**
+
+    ```bash
+    streamlit run app.py
+    ```
+
+3. Buka browser dan akses aplikasi di:  
+   [http://localhost:PORT](http://localhost:PORT)
+
+---
+
+**Pastikan file berikut tersedia di direktori project:**
+- `app.py` — file utama aplikasi Streamlit
+- `data/attrition_dashboard_data.csv` — dataset asli untuk EDA dan visualisasi
+- `model/model.pkl` — pipeline model hasil training
+- `requirements.txt` — daftar dependency yang dibutuhkan
