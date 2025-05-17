@@ -103,7 +103,7 @@ if menu == "Feature Importance":
 elif menu == "Komparasi Fitur terhadap Attrition":
     st.title("📊 Komparasi Fitur terhadap Attrition")
     selected_feature = st.selectbox("Pilih fitur untuk dibandingkan dengan Attrition:", df.columns.drop('Attrition'))
-    fig, ax = plt.subplots(figsize=(5, 2))
+    fig, ax = plt.subplots(figsize=(9, 5))
     if selected_feature in nominal_cols:
         sns.countplot(x=selected_feature, hue='Attrition', data=df, ax=ax)
         ax.set_title(f"{selected_feature} (Nominal) vs Attrition")
