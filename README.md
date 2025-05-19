@@ -98,7 +98,7 @@ Fitur-fitur ini tidak berkontribusi pada analisis atau bersifat konstan:
 - Python 3.12.6
 - Library: `pandas`, `seaborn`, `matplotlib`, `scikit-learn`, `streamlit`, `joblib`
 - Visualisasi: Streamlit Dashboard
-- Notebook: `notebook.ipynb` (data cleaning, EDA, modeling)
+- Notebook: `notebook.ipynb` (Data Understanding, Data Preparation/Preprocessing, Modelling, Evaluation, Insights)
 
 Ikuti langkah-langkah berikut untuk menyiapkan environment proyek ini:
 
@@ -146,7 +146,7 @@ Ikuti langkah-langkah berikut untuk menyiapkan environment proyek ini:
 4. **Akses aplikasi di browser:**
 
     ```
-    http://localhost:8501
+    http://localhost:[PORT]
     ```
 
 ### 🔍 Cara Menjalankan File Prediksi (Opsional)
@@ -165,18 +165,18 @@ Selain menggunakan Streamlit, kamu juga dapat menjalankan prediksi secara langsu
 File ini akan menampilkan hasil prediksi berdasarkan data baru (simulasi) yang telah dimasukkan di dalam script.
 
 Contoh output:
-✅ Karyawan diprediksi tidak resign.
-⚠️ Karyawan berisiko resign.
+**✅ Karyawan diprediksi tidak resign.**
+**⚠️ Karyawan berisiko resign.**
 
 ---
 
 ## 📊 Business Dashboard
 
 Aplikasi Streamlit menyediakan 5 menu utama:
-1. **Feature Importance** – Menampilkan ranking fitur berdasarkan pengaruh terhadap prediksi attrition.
-2. **Komparasi Fitur vs Attrition** – Memungkinkan user membandingkan setiap fitur terhadap tingkat attrition secara visual (dengan label deskriptif untuk ordinal).
-3. **Prediksi Attrition (Inference)** – Input form untuk memprediksi kemungkinan resign berdasarkan data karyawan baru.
-4. **Distribusi Data** – Menampilkan distribusi kelas dan hasil balancing dataset.
+1. **Overview Data** – Menampilkan data secara keseluruhan, jumlah baris, jumlah dan nama kolom, dan distribusi target prediksi (attrition).
+2. **Feature Importance** – Menampilkan ranking fitur berdasarkan pengaruh terhadap prediksi attrition.
+3. **Komparasi Fitur vs Attrition** – Memungkinkan user membandingkan setiap fitur terhadap tingkat attrition secara visual (dengan label deskriptif untuk ordinal).
+4. **Prediksi Attrition (Inference)** – Input form untuk memprediksi kemungkinan resign berdasarkan data karyawan baru.
 5. **Insight & Rekomendasi** – Menampilkan hasil analisis dan saran strategi retensi karyawan.
 
 ---
