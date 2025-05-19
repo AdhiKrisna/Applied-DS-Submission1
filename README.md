@@ -2,7 +2,17 @@
 
 ## 💼 Business Understanding
 
-Perusahaan edutech menghadapi tantangan besar dalam mempertahankan karyawan, khususnya di bidang teknis dan operasional. Tingginya angka *attrition* menyebabkan terganggunya kontinuitas proyek dan peningkatan biaya rekrutmen. Proyek ini bertujuan untuk membantu tim HR memahami pola attrition, melakukan prediksi resign, serta membangun sistem pendukung keputusan berbasis data.
+**Jaya Jaya Maju** adalah perusahaan multinasional yang telah berdiri sejak tahun 2000 dan kini memiliki lebih dari 1000 karyawan yang tersebar di seluruh penjuru negeri.  
+Meskipun telah menjadi perusahaan besar, Jaya Jaya Maju masih menghadapi tantangan serius dalam mengelola dan mempertahankan karyawan.
+
+Hal ini ditunjukkan oleh tingginya **attrition rate** perusahaan—lebih dari 10% karyawan keluar dalam periode tertentu, yang berdampak pada terganggunya operasional, meningkatnya biaya rekrutmen, dan hilangnya tenaga kerja berpengalaman.
+
+Untuk mengatasi masalah ini, manajer HR meminta bantuan dalam:
+- Mengidentifikasi faktor-faktor utama yang memengaruhi keputusan karyawan untuk keluar
+- Memprediksi karyawan yang berpotensi resign
+- Menyusun **business dashboard** yang membantu HR memantau kondisi SDM dan attrition secara visual dan real time
+
+Proyek ini menjadi langkah strategis Jaya Jaya Maju dalam mengelola karyawan berbasis data dan mencegah attrition yang lebih tinggi di masa depan.
 
 ---
 
