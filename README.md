@@ -35,7 +35,61 @@ Sebagai bentuk respon terhadap permasalahan ini, tim HR perusahaan ingin:
 
 ### ✅ Sumber Data
 
-Dataset yang digunakan adalah dataset karyawan dari Dicoding yang berisi data demografis dan atribut pekerjaan karyawan.
+Dataset yang digunakan adalah dataset karyawan dari Dicoding yang berisi data demografis dan atribut pekerjaan karyawan. Berikut ini adalah pembagian kategori fitur dataset:
+
+### 🔢 Numerical Features (Continuous or Countable)
+
+These are continuous or countable variables, ideal for mathematical operations and scaling:
+
+- **Age** – Age of the employee  
+- **DailyRate** – Daily salary  
+- **DistanceFromHome** – Distance from work to home (in km)  
+- **HourlyRate** – Hourly salary  
+- **MonthlyIncome** – Monthly salary  
+- **MonthlyRate** – Monthly rate  
+- **NumCompaniesWorked** – Number of companies worked at  
+- **PercentSalaryHike** – The percentage increase in salary last year  
+- **TotalWorkingYears** – Total years worked  
+- **TrainingTimesLastYear** – Number of trainings attended last year  
+- **YearsAtCompany** – Years at company  
+- **YearsInCurrentRole** – Years in the current role  
+- **YearsSinceLastPromotion** – Years since the last promotion  
+- **YearsWithCurrManager** – Years with the current manager  
+
+### 📊 Ordinal Features (Ranked Categories)
+
+These are categorical features that have meaningful order or hierarchy. They are encoded using **OrdinalEncoder**:
+
+- **Education** – (1 = Below College, 2 = College, 3 = Bachelor, 4 = Master, 5 = Doctor)  
+- **EnvironmentSatisfaction** – (1 = Low, 2 = Medium, 3 = High, 4 = Very High)  
+- **JobInvolvement** – (1 = Low, 2 = Medium, 3 = High, 4 = Very High)  
+- **JobLevel** – Job level from 1 (lowest) to 5 (highest)  
+- **JobSatisfaction** – (1 = Low, 2 = Medium, 3 = High, 4 = Very High)  
+- **PerformanceRating** – (1 = Low, 2 = Good, 3 = Excellent, 4 = Outstanding)  
+- **RelationshipSatisfaction** – (1 = Low, 2 = Medium, 3 = High, 4 = Very High)  
+- **StockOptionLevel** – Level of stock option awarded (0–3)  
+- **WorkLifeBalance** – (1 = Low, 2 = Good, 3 = Excellent, 4 = Outstanding)  
+
+### 🧩 Nominal Features (Unordered Categories)
+
+These are categorical features with no inherent order. They are encoded using **One-Hot Encoding**:
+
+- **BusinessTravel** – Travel frequency (e.g., Rarely, Frequently)  
+- **Department** – Department of the employee  
+- **EducationField** – Employee’s field of education  
+- **Gender** – Male / Female  
+- **JobRole** – Employee’s job role  
+- **MaritalStatus** – Marital status (Single, Married, Divorced)  
+- **OverTime** – Whether the employee works overtime (Yes / No)  
+
+### 🗑️ Droppable Columns
+
+These features do not contribute to the analysis or are constant:
+
+- **EmployeeId** - Identifier only  
+- **EmployeeCount** - Constant value  
+- **Over18** - Constant (all employees over 18)  
+- **StandardHours** - Constant (value = 80 for all)  
 
 🔗 Link dataset: [https://github.com/dicodingacademy/dicoding_dataset/tree/main/employee](https://github.com/dicodingacademy/dicoding_dataset/tree/main/employee)
 
@@ -111,6 +165,8 @@ Selain menggunakan Streamlit, kamu juga dapat menjalankan prediksi secara langsu
 File ini akan menampilkan hasil prediksi berdasarkan data baru (simulasi) yang telah dimasukkan di dalam script.
 
 Contoh output:
+✅ Karyawan diprediksi tidak resign.
+⚠️ Karyawan berisiko resign.
 
 ---
 
