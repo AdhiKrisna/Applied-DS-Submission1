@@ -1,165 +1,115 @@
-# Employee Data
+# 🎓 Proyek Akhir: Employee Attrition Prediction untuk Perusahaan Edutech
 
-## 🧾 Feature Explanation (Grouped by Data Type)
+## 💼 Business Understanding
 
-The dataset contains demographic details, work-related metrics, and attrition flag. Features are grouped into **numerical**, **ordinal**, and **nominal** for better preprocessing and modeling clarity.
-
----
-
-### 🔢 Numerical Features (Continuous or Countable)
-
-These are continuous or countable variables, ideal for mathematical operations and scaling:
-
-- **Age** – Age of the employee  
-- **DailyRate** – Daily salary  
-- **DistanceFromHome** – Distance from work to home (in km)  
-- **HourlyRate** – Hourly salary  
-- **MonthlyIncome** – Monthly salary  
-- **MonthlyRate** – Monthly rate  
-- **NumCompaniesWorked** – Number of companies worked at  
-- **PercentSalaryHike** – The percentage increase in salary last year  
-- **TotalWorkingYears** – Total years worked  
-- **TrainingTimesLastYear** – Number of trainings attended last year  
-- **YearsAtCompany** – Years at company  
-- **YearsInCurrentRole** – Years in the current role  
-- **YearsSinceLastPromotion** – Years since the last promotion  
-- **YearsWithCurrManager** – Years with the current manager  
+Perusahaan edutech menghadapi tantangan besar dalam mempertahankan karyawan, khususnya di bidang teknis dan operasional. Tingginya angka *attrition* menyebabkan terganggunya kontinuitas proyek dan peningkatan biaya rekrutmen. Proyek ini bertujuan untuk membantu tim HR memahami pola attrition, melakukan prediksi resign, serta membangun sistem pendukung keputusan berbasis data.
 
 ---
 
-### 📊 Ordinal Features (Ranked Categories)
+## ❓ Permasalahan Bisnis
 
-These are categorical features that have meaningful order or hierarchy. They are encoded using **OrdinalEncoder**:
-
-- **Education** – (1 = Below College, 2 = College, 3 = Bachelor, 4 = Master, 5 = Doctor)  
-- **EnvironmentSatisfaction** – (1 = Low, 2 = Medium, 3 = High, 4 = Very High)  
-- **JobInvolvement** – (1 = Low, 2 = Medium, 3 = High, 4 = Very High)  
-- **JobLevel** – Job level from 1 (lowest) to 5 (highest)  
-- **JobSatisfaction** – (1 = Low, 2 = Medium, 3 = High, 4 = Very High)  
-- **PerformanceRating** – (1 = Low, 2 = Good, 3 = Excellent, 4 = Outstanding)  
-- **RelationshipSatisfaction** – (1 = Low, 2 = Medium, 3 = High, 4 = Very High)  
-- **StockOptionLevel** – Level of stock option awarded (0–3)  
-- **WorkLifeBalance** – (1 = Low, 2 = Good, 3 = Excellent, 4 = Outstanding)  
+1. Apa saja faktor utama yang memengaruhi keputusan karyawan untuk keluar dari perusahaan?
+2. Dapatkah kita memprediksi kemungkinan seorang karyawan resign?
+3. Bagaimana visualisasi data dapat membantu HR memahami dinamika attrition secara menyeluruh?
 
 ---
 
-### 🧩 Nominal Features (Unordered Categories)
+## 📌 Cakupan Proyek
 
-These are categorical features with no inherent order. They are encoded using **One-Hot Encoding**:
-
-- **BusinessTravel** – Travel frequency (e.g., Rarely, Frequently)  
-- **Department** – Department of the employee  
-- **EducationField** – Employee’s field of education  
-- **Gender** – Male / Female  
-- **JobRole** – Employee’s job role  
-- **MaritalStatus** – Marital status (Single, Married, Divorced)  
-- **OverTime** – Whether the employee works overtime (Yes / No)  
+- Pembersihan dan persiapan dataset HR
+- Eksplorasi visual terhadap faktor-faktor attrition
+- Penanganan data imbalance menggunakan upsampling
+- Pelatihan model klasifikasi (Random Forest) menggunakan pipeline
+- Penyimpanan model dan pembuatan dashboard interaktif berbasis Streamlit
+- Penyusunan insight dan rekomendasi untuk HR
 
 ---
 
-### 🗑️ Droppable Columns
+## 🧹 Persiapan
 
-These features do not contribute to the analysis or are constant:
+**Sumber data**:  
+Dataset Dicoding :
+🔗 https://github.com/dicodingacademy/dicoding_dataset/tree/main/employee
 
-- **EmployeeId** - Identifier only  
-- **EmployeeCount** - Constant value  
-- **Over18** - Constant (all employees over 18)  
-- **StandardHours** - Constant (value = 80 for all)  
-
-
-## Acknowledgements
-https://www.ibm.com/communities/analytics/watson-analytics-blog/watson-analytics-use-case-for-hr-retaining-valuable-employees/
-
-# Employee Attrition Analysis Project
-
-## 📌 Business Understanding
-
-Departemen HR menghadapi masalah tingginya *employee attrition* yang berdampak langsung pada stabilitas perusahaan. Proyek ini bertujuan untuk mengidentifikasi faktor utama penyebab attrition dan menyediakan insight untuk strategi retensi karyawan yang lebih baik.
+**Setup environment**:
+- Python 3.12.6
+- Library: `pandas`, `seaborn`, `matplotlib`, `scikit-learn`, `streamlit`, `joblib`
+- Visualisasi: Streamlit Dashboard
+- Notebook: `notebook.ipynb` (data cleaning, EDA, modeling)
 
 ---
 
-## 🧠 Data Understanding
+## 📊 Business Dashboard
 
-Dataset berisi informasi demografis dan pekerjaan dari karyawan. Target yang dianalisis adalah kolom `Attrition` (0 = Tidak, 1 = Ya).
-
-Referensi dataset: [IBM HR Analytics](https://www.ibm.com/communities/analytics/watson-analytics-blog/watson-analytics-use-case-for-hr-retaining-valuable-employees/)
-
----
-
-## 🧹 Data Preparation
-
-- Drop kolom tidak relevan: `EmployeeId`, `Over18`, `StandardHours`
-- Encode kolom kategorikal dengan `LabelEncoder`
-- Standardisasi fitur numerik menggunakan `StandardScaler`
-- Split dataset menjadi training dan testing (80:20)
+Aplikasi Streamlit menyediakan 5 menu utama:
+1. **Feature Importance** – Menampilkan ranking fitur berdasarkan pengaruh terhadap prediksi attrition.
+2. **Komparasi Fitur vs Attrition** – Memungkinkan user membandingkan setiap fitur terhadap tingkat attrition secara visual (dengan label deskriptif untuk ordinal).
+3. **Prediksi Attrition (Inference)** – Input form untuk memprediksi kemungkinan resign berdasarkan data karyawan baru.
+4. **Distribusi Data** – Menampilkan distribusi kelas dan hasil balancing dataset.
+5. **Insight & Rekomendasi** – Menampilkan hasil analisis dan saran strategi retensi karyawan.
 
 ---
 
-## 📊 Exploratory Data Analysis (EDA)
+## ✅ Conclusion
 
-Visualisasi dilakukan untuk menggali insight awal terhadap data:
-
-- **Distribusi attrition**: mayoritas karyawan tetap
-- **OverTime vs Attrition**: karyawan lembur cenderung lebih banyak keluar
-- **MonthlyIncome**: income rendah cenderung lebih banyak resign
-- **JobSatisfaction & EnvironmentSatisfaction**: tingkat kepuasan rendah berkorelasi dengan attrition
-- **YearsAtCompany**: attrition tinggi pada masa kerja < 3 tahun
+Model machine learning berhasil dibangun menggunakan Random Forest dengan akurasi di atas 80%.  
+Fitur-fitur seperti `Age`, `MonthlyIncome`, `OverTime`, dan `TotalWorkingYears` terbukti memiliki pengaruh besar dalam menentukan apakah seorang karyawan akan keluar dari perusahaan.  
+Dashboard interaktif juga memberikan kemudahan eksplorasi dan interpretasi hasil bagi pihak HR.
 
 ---
 
-## 📈 Modeling
+## 🚀 Rekomendasi Action Items
 
-- Algoritma: `RandomForestClassifier`
-- Metode evaluasi: `confusion matrix`, `classification report`
-- Hasil: Akurasi di atas 80% dengan recall yang baik untuk prediksi kelas `Attrition = 1`
-- Model dan scaler disimpan di folder `model/` dalam format `.pkl`
+1. **Kurangi lembur berlebihan**  
+   Karyawan yang lembur memiliki risiko resign lebih tinggi.
 
----
+2. **Optimalkan kompensasi dasar**  
+   Pendapatan rendah secara signifikan berkorelasi dengan keputusan resign.
 
-## 💡 Insights & Recommendations
+3. **Tingkatkan program onboarding untuk karyawan baru (<3 tahun)**  
+   Masa kerja singkat memiliki attrition tertinggi – mentoring dan career path penting.
 
-Berdasarkan hasil analisis data dan modeling, berikut adalah rekomendasi utama yang dapat diterapkan oleh departemen HR untuk menurunkan tingkat attrition:
+4. **Fasilitasi pelatihan dan pengembangan karir**  
+   Karyawan yang terlibat aktif dalam pelatihan cenderung bertahan lebih lama.
 
-1. **Kurangi lembur**  
-   Karyawan dengan status lembur (*OverTime = Yes*) memiliki kecenderungan lebih tinggi untuk resign. Penyesuaian beban kerja atau sistem shift dapat membantu.
-
-2. **Perhatikan penghasilan dasar**  
-   Karyawan dengan pendapatan bulanan rendah terlihat lebih rentan keluar dari perusahaan. Strategi kenaikan gaji yang adil perlu dipertimbangkan, terutama untuk level pekerjaan rendah.
-
-3. **Tingkatkan Work-Life Balance**  
-   Meskipun bukan fitur terpenting di model, EDA menunjukkan bahwa karyawan dengan WorkLifeBalance rendah lebih sering resign. Program keseimbangan kerja-hidup tetap krusial untuk retensi jangka panjang.
-
-4. **Fokus pada karyawan dengan masa kerja < 3 tahun**  
-   Kelompok karyawan baru (0–3 tahun masa kerja) menunjukkan tingkat attrition tertinggi. Perlu program onboarding dan mentoring yang kuat untuk meningkatkan loyalitas awal.
-
-5. **Perbanyak pelatihan dan peluang pengembangan karir**  
-   Karyawan yang sering mengikuti pelatihan cenderung bertahan lebih lama. Program pengembangan karir dapat membantu mengurangi turnover dari sisi motivasi intrinsik.
+5. **Evaluasi kembali kebijakan Work-Life Balance**  
+   Meskipun bukan fitur paling penting dalam model, EDA menunjukkan korelasi negatif antara skor WLB dan attrition.
 
 ---
 
-## 📦 Cara Menjalankan Aplikasi Streamlit
+## 🛠️ Cara Menjalankan Aplikasi Streamlit Secara Lokal
 
-Untuk melihat dashboard interaktif bisnis, ikuti langkah-langkah berikut:
+Ikuti langkah-langkah berikut untuk menjalankan aplikasi dashboard ini di komputer lokal Anda:
 
-1. **Install dependencies** terlebih dahulu:
+1. **Clone repository project dari GitHub:**
+
+    ```bash
+    git clone https://github.com/AdhiKrisna/Applied-DS-Submission1.git
+    cd Applied-DS-Submission1
+    ```
+
+2. **Install semua dependencies dari `requirements.txt`:**
+
+    Disarankan menggunakan virtual environment.
 
     ```bash
     pip install -r requirements.txt
     ```
 
-2. **Jalankan aplikasi Streamlit:**
+3. **Jalankan aplikasi Streamlit:**
 
     ```bash
     streamlit run app.py
     ```
 
-3. Buka browser dan akses aplikasi di:  
-   [http://localhost:PORT](http://localhost:PORT)
+4. **Akses aplikasi di browser:**
+
+    Setelah berhasil dijalankan, buka browser dan akses:
+
+    ```
+    http://localhost:8501
+    ```
 
 ---
 
-**Pastikan file berikut tersedia di direktori project:**
-- `app.py` — file utama aplikasi Streamlit
-- `data/attrition_dashboard_data.csv` — dataset asli untuk EDA dan visualisasi
-- `model/model.pkl` — pipeline model hasil training
-- `requirements.txt` — daftar dependency yang dibutuhkan
+
