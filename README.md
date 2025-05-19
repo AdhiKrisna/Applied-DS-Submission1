@@ -2,17 +2,11 @@
 
 ## 💼 Business Understanding
 
-**Jaya Jaya Maju** adalah perusahaan multinasional yang telah berdiri sejak tahun 2000 dan kini memiliki lebih dari 1000 karyawan yang tersebar di seluruh penjuru negeri.  
-Meskipun telah menjadi perusahaan besar, Jaya Jaya Maju masih menghadapi tantangan serius dalam mengelola dan mempertahankan karyawan.
+**Jaya Jaya Maju** adalah perusahaan berskala multinasional yang telah berkembang pesat sejak awal 2000-an, dengan ribuan karyawan yang tersebar di berbagai wilayah operasional. Namun, seiring pertumbuhannya, perusahaan mulai menghadapi tantangan dalam menjaga stabilitas tenaga kerja, yang ditandai dengan meningkatnya angka attrition atau tingkat pengunduran diri karyawan secara sukarela.
 
-Hal ini ditunjukkan oleh tingginya **attrition rate** perusahaan—lebih dari 10% karyawan keluar dalam periode tertentu, yang berdampak pada terganggunya operasional, meningkatnya biaya rekrutmen, dan hilangnya tenaga kerja berpengalaman.
+Tingginya attrition rate ini bukan hanya berdampak pada kontinuitas proyek, tetapi juga menyebabkan beban tambahan bagi divisi HR dalam hal rekrutmen dan pelatihan. Menyadari pentingnya isu ini, tim HR ingin memanfaatkan data historis karyawan untuk menganalisis pola attrition serta mengidentifikasi faktor-faktor utama yang mendorong karyawan untuk keluar dari perusahaan.
 
-Untuk mengatasi masalah ini, manajer HR meminta bantuan dalam:
-- Mengidentifikasi faktor-faktor utama yang memengaruhi keputusan karyawan untuk keluar
-- Memprediksi karyawan yang berpotensi resign
-- Menyusun **business dashboard** yang membantu HR memantau kondisi SDM dan attrition secara visual dan real time
-
-Proyek ini menjadi langkah strategis Jaya Jaya Maju dalam mengelola karyawan berbasis data dan mencegah attrition yang lebih tinggi di masa depan.
+Melalui proyek ini, diharapkan dapat dibangun sistem pendukung keputusan berbasis machine learning serta dashboard bisnis interaktif yang mempermudah monitoring dan pengambilan kebijakan strategis terkait retensi karyawan.
 
 ---
 
