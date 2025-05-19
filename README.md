@@ -1,31 +1,43 @@
-# Submission Pertama: Menyelesaikan Permasalahan Human Resources Perusahaan Jaya Jaya Maju
+# 📊 Submission Pertama: Menyelesaikan Permasalahan Human Resources Perusahaan Jaya Jaya Maju
 
 ## 💼 Business Understanding
 
-**Jaya Jaya Maju** adalah perusahaan berskala multinasional yang telah berkembang pesat sejak awal 2000-an, dengan ribuan karyawan yang tersebar di berbagai wilayah operasional. Namun, seiring pertumbuhannya, perusahaan mulai menghadapi tantangan dalam menjaga stabilitas tenaga kerja, yang ditandai dengan meningkatnya angka attrition atau tingkat pengunduran diri karyawan secara sukarela.
+Jaya Jaya Maju merupakan perusahaan multinasional yang berdiri sejak tahun 2000 dan telah memiliki lebih dari 1000 karyawan yang tersebar di seluruh Indonesia.  
+Namun, perusahaan menghadapi tantangan serius dalam mempertahankan karyawan, dengan attrition rate yang dilaporkan mencapai lebih dari 10%. Hal ini berdampak pada produktivitas, stabilitas tim, serta biaya operasional HR seperti rekrutmen dan pelatihan karyawan baru.
 
-Tingginya attrition rate ini bukan hanya berdampak pada kontinuitas proyek, tetapi juga menyebabkan beban tambahan bagi divisi HR dalam hal rekrutmen dan pelatihan. Menyadari pentingnya isu ini, tim HR ingin memanfaatkan data historis karyawan untuk menganalisis pola attrition serta mengidentifikasi faktor-faktor utama yang mendorong karyawan untuk keluar dari perusahaan.
-
-Melalui proyek ini, diharapkan dapat dibangun sistem pendukung keputusan berbasis machine learning serta dashboard bisnis interaktif yang mempermudah monitoring dan pengambilan kebijakan strategis terkait retensi karyawan.
+Sebagai bentuk respon terhadap permasalahan ini, tim HR perusahaan ingin:
+- Mengidentifikasi faktor-faktor yang memengaruhi keputusan karyawan untuk keluar dari perusahaan
+- Memprediksi kemungkinan resign menggunakan pendekatan machine learning
+- Menyusun business dashboard yang mendukung monitoring kondisi HR secara interaktif dan informatif
 
 ---
 
 ## ❓ Permasalahan Bisnis
 
-1. Apa saja faktor utama yang memengaruhi keputusan karyawan untuk keluar dari perusahaan?
-2. Dapatkah kita memprediksi kemungkinan seorang karyawan resign?
-3. Bagaimana visualisasi data dapat membantu HR memahami dinamika attrition secara menyeluruh?
+1. Tingginya **attrition rate (>10%)** yang menyebabkan beban tambahan bagi divisi HR
+2. Kurangnya pemahaman mendalam tentang **faktor penyebab utama attrition**
+3. Belum adanya sistem prediktif dan visualisasi data untuk mendukung pengambilan keputusan oleh manajer HR
 
 ---
 
 ## 📌 Cakupan Proyek
 
-- Pembersihan dan persiapan dataset HR
-- Eksplorasi visual terhadap faktor-faktor attrition
-- Penanganan data imbalance menggunakan upsampling
-- Pelatihan model klasifikasi (Random Forest) menggunakan pipeline
-- Penyimpanan model dan pembuatan dashboard interaktif berbasis Streamlit
-- Penyusunan insight dan rekomendasi untuk HR
+- Analisis eksploratif untuk memahami pola dan distribusi data karyawan
+- Penerapan preprocessing (scaling, encoding, handling missing values)
+- Penanganan imbalance data menggunakan teknik upsampling
+- Pembangunan model machine learning menggunakan pipeline dan Random Forest
+- Pembuatan dashboard interaktif berbasis Streamlit
+- Penyusunan insight dan rekomendasi actionable bagi tim HR
+
+---
+
+## 🧹 Persiapan
+
+### ✅ Sumber Data
+
+Dataset yang digunakan adalah dataset karyawan dari Dicoding yang berisi data demografis dan atribut pekerjaan karyawan.
+
+🔗 Link dataset: [https://github.com/dicodingacademy/dicoding_dataset/tree/main/employee](https://github.com/dicodingacademy/dicoding_dataset/tree/main/employee)
 
 ---
 
@@ -41,6 +53,60 @@ Dataset Dicoding :
 - Visualisasi: Streamlit Dashboard
 - Notebook: `notebook.ipynb` (data cleaning, EDA, modeling)
 
+---
+
+### 🖥️ Setup Environment (Menggunakan venv Python)
+
+Ikuti langkah-langkah berikut untuk menyiapkan environment proyek ini:
+
+1. **Buat virtual environment**:
+
+    ```bash
+    python -m venv env
+    ```
+
+2. **Aktifkan virtual environment**:
+
+    - Windows:
+      ```bash
+      .\\env\\Scripts\\activate
+      ```
+    - Mac/Linux:
+      ```bash
+      source env/bin/activate
+      ```
+
+3. **Install semua dependencies:**
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+---
+
+## 🛠️ Cara Menjalankan Aplikasi
+
+1. **Clone repository:**
+
+    ```bash
+    git clone https://github.com/AdhiKrisna/Applied-DS-Submission1.git
+    cd Applied-DS-Submission1
+    ```
+
+2. **Aktifkan virtual environment dan install dependensi**  
+   (lihat langkah Setup Environment di atas)
+
+3. **Jalankan aplikasi Streamlit:**
+
+    ```bash
+    streamlit run app.py
+    ```
+
+4. **Akses aplikasi di browser:**
+
+    ```
+    http://localhost:8501
+    ```
 ---
 
 ## 📊 Business Dashboard
