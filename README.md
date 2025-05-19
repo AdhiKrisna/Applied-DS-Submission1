@@ -15,7 +15,7 @@ Sebagai bentuk respon terhadap permasalahan ini, tim HR perusahaan ingin:
 ## ❓ Permasalahan Bisnis
 
 1. Tingginya **attrition rate (>10%)** yang menyebabkan beban tambahan bagi divisi HR
-2. Kurangnya pemahaman mendalam tentang **faktor penyebab utama attrition**
+2. Kurangnya pemahaman mendalam tentang **faktor penyebab utama attrition/resign rate yang tinggi**
 3. Belum adanya sistem prediktif dan visualisasi data untuk mendukung pengambilan keputusan oleh manajer HR
 
 ---
@@ -41,21 +41,12 @@ Dataset yang digunakan adalah dataset karyawan dari Dicoding yang berisi data de
 
 ---
 
-## 🧹 Persiapan
+### 🖥️ Setup Environment (Menggunakan venv Python)
 
-**Sumber data**:  
-Dataset Dicoding :
-🔗 https://github.com/dicodingacademy/dicoding_dataset/tree/main/employee
-
-**Setup environment**:
 - Python 3.12.6
 - Library: `pandas`, `seaborn`, `matplotlib`, `scikit-learn`, `streamlit`, `joblib`
 - Visualisasi: Streamlit Dashboard
 - Notebook: `notebook.ipynb` (data cleaning, EDA, modeling)
-
----
-
-### 🖥️ Setup Environment (Menggunakan venv Python)
 
 Ikuti langkah-langkah berikut untuk menyiapkan environment proyek ini:
 
@@ -107,6 +98,8 @@ Ikuti langkah-langkah berikut untuk menyiapkan environment proyek ini:
     ```
     http://localhost:8501
     ```
+---
+
 ---
 
 ## 📊 Business Dashboard
