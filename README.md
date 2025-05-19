@@ -1,4 +1,4 @@
-# 🎓 Submission Pertama: Menyelesaikan Permasalahan Human Resources Perusahaan Jaya Jaya Maju
+# Submission Pertama: Menyelesaikan Permasalahan Human Resources Perusahaan Jaya Jaya Maju
 
 ## 💼 Business Understanding
 
