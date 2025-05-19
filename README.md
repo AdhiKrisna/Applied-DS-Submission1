@@ -35,11 +35,13 @@ Sebagai bentuk respon terhadap permasalahan ini, tim HR perusahaan ingin:
 
 ### ✅ Sumber Data
 
+🔗 Link dataset: [https://github.com/dicodingacademy/dicoding_dataset/tree/main/employee](https://github.com/dicodingacademy/dicoding_dataset/tree/main/employee)
+
 Dataset yang digunakan adalah dataset karyawan dari Dicoding yang berisi data demografis dan atribut pekerjaan karyawan. Berikut ini adalah pembagian kategori fitur dataset:
 
 ### 🔢 Numerical Features (Continuous or Countable)
 
-These are continuous or countable variables, ideal for mathematical operations and scaling:
+Ini adalah variabel kontinu atau terhitung, ideal untuk operasi matematika dan scalling:
 
 - **Age** – Age of the employee  
 - **DailyRate** – Daily salary  
@@ -58,7 +60,7 @@ These are continuous or countable variables, ideal for mathematical operations a
 
 ### 📊 Ordinal Features (Ranked Categories)
 
-These are categorical features that have meaningful order or hierarchy. They are encoded using **OrdinalEncoder**:
+Ini adalah fitur kategoris yang memiliki urutan atau hierarki yang berarti. Fitur-fitur ini dikodekan menggunakan **OrdinalEncoder**:
 
 - **Education** – (1 = Below College, 2 = College, 3 = Bachelor, 4 = Master, 5 = Doctor)  
 - **EnvironmentSatisfaction** – (1 = Low, 2 = Medium, 3 = High, 4 = Very High)  
@@ -72,7 +74,7 @@ These are categorical features that have meaningful order or hierarchy. They are
 
 ### 🧩 Nominal Features (Unordered Categories)
 
-These are categorical features with no inherent order. They are encoded using **One-Hot Encoding**:
+Ini adalah fitur kategoris yang memiliki urutan atau hierarki yang berarti. Fitur-fitur ini dikodekan menggunakan  **One-Hot Encoding**:
 
 - **BusinessTravel** – Travel frequency (e.g., Rarely, Frequently)  
 - **Department** – Department of the employee  
@@ -84,14 +86,12 @@ These are categorical features with no inherent order. They are encoded using **
 
 ### 🗑️ Droppable Columns
 
-These features do not contribute to the analysis or are constant:
+Fitur-fitur ini tidak berkontribusi pada analisis atau bersifat konstan:
 
 - **EmployeeId** - Identifier only  
 - **EmployeeCount** - Constant value  
 - **Over18** - Constant (all employees over 18)  
 - **StandardHours** - Constant (value = 80 for all)  
-
-🔗 Link dataset: [https://github.com/dicodingacademy/dicoding_dataset/tree/main/employee](https://github.com/dicodingacademy/dicoding_dataset/tree/main/employee)
 
 ### 🖥️ Setup Environment (Menggunakan venv Python)
 
@@ -125,7 +125,7 @@ Ikuti langkah-langkah berikut untuk menyiapkan environment proyek ini:
     pip install -r requirements.txt
     ```
 
-## 🛠️ Cara Menjalankan Aplikasi
+### 🛠️ Cara Menjalankan Aplikasi
 
 1. **Clone repository:**
 
