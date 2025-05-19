@@ -74,7 +74,7 @@ Ini adalah fitur kategoris yang memiliki urutan atau hierarki yang berarti. Fitu
 
 ### 🧩 Nominal Features (Unordered Categories)
 
-Ini adalah fitur kategoris yang memiliki urutan atau hierarki yang berarti. Fitur-fitur ini dikodekan menggunakan  **One-Hot Encoding**:
+Ini adalah fitur kategorikal yang **tidak memiliki urutan atau hierarki**. Setiap kategori dianggap independen satu sama lain, sehingga dikodekan menggunakan **One-Hot Encoding**:
 
 - **BusinessTravel** – Travel frequency (e.g., Rarely, Frequently)  
 - **Department** – Department of the employee  
