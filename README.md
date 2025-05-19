@@ -1,4 +1,4 @@
-# 🎓 Proyek Akhir: Employee Attrition Prediction untuk Perusahaan Edutech
+# 🎓 Submission Pertama: Menyelesaikan Permasalahan Human Resources Perusahaan Jaya Jaya Maju
 
 ## 💼 Business Understanding
 
