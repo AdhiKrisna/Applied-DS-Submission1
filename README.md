@@ -165,8 +165,8 @@ Selain menggunakan Streamlit, kamu juga dapat menjalankan prediksi secara langsu
 File ini akan menampilkan hasil prediksi berdasarkan data baru (simulasi) yang telah dimasukkan di dalam script.
 
 Contoh output:
-**✅ Karyawan diprediksi tidak resign.**
-**⚠️ Karyawan berisiko resign.**
+1. **✅ Karyawan diprediksi tidak resign.**
+2. **⚠️ Karyawan berisiko resign.**
 
 ---
 
