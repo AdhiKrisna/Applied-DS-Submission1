@@ -39,8 +39,6 @@ Dataset yang digunakan adalah dataset karyawan dari Dicoding yang berisi data de
 
 🔗 Link dataset: [https://github.com/dicodingacademy/dicoding_dataset/tree/main/employee](https://github.com/dicodingacademy/dicoding_dataset/tree/main/employee)
 
----
-
 ### 🖥️ Setup Environment (Menggunakan venv Python)
 
 - Python 3.12.6
@@ -73,8 +71,6 @@ Ikuti langkah-langkah berikut untuk menyiapkan environment proyek ini:
     pip install -r requirements.txt
     ```
 
----
-
 ## 🛠️ Cara Menjalankan Aplikasi
 
 1. **Clone repository:**
@@ -98,7 +94,23 @@ Ikuti langkah-langkah berikut untuk menyiapkan environment proyek ini:
     ```
     http://localhost:8501
     ```
----
+
+### 🔍 Cara Menjalankan File Prediksi (Opsional)
+
+Selain menggunakan Streamlit, kamu juga dapat menjalankan prediksi secara langsung menggunakan file Python `prediction.py` yang telah disediakan.
+
+### Langkah-langkah:
+
+1. Pastikan virtual environment sudah aktif (lihat bagian Setup Environment)
+2. Jalankan script berikut di terminal:
+
+    ```bash
+    python prediction.py
+    ```
+
+File ini akan menampilkan hasil prediksi berdasarkan data baru (simulasi) yang telah dimasukkan di dalam script.
+
+Contoh output:
 
 ---
 
@@ -139,40 +151,3 @@ Dashboard interaktif juga memberikan kemudahan eksplorasi dan interpretasi hasil
    Meskipun bukan fitur paling penting dalam model, EDA menunjukkan korelasi negatif antara skor WLB dan attrition.
 
 ---
-
-## 🛠️ Cara Menjalankan Aplikasi Streamlit Secara Lokal
-
-Ikuti langkah-langkah berikut untuk menjalankan aplikasi dashboard ini di komputer lokal Anda:
-
-1. **Clone repository project dari GitHub:**
-
-    ```bash
-    git clone https://github.com/AdhiKrisna/Applied-DS-Submission1.git
-    cd Applied-DS-Submission1
-    ```
-
-2. **Install semua dependencies dari `requirements.txt`:**
-
-    Disarankan menggunakan virtual environment.
-
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-3. **Jalankan aplikasi Streamlit:**
-
-    ```bash
-    streamlit run app.py
-    ```
-
-4. **Akses aplikasi di browser:**
-
-    Setelah berhasil dijalankan, buka browser dan akses:
-
-    ```
-    http://localhost:8501
-    ```
-
----
-
-

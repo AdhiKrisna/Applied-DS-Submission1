@@ -44,4 +44,4 @@ new_data = pd.DataFrame(data)
 
 # Prediksi
 prediction = pipeline.predict(new_data)[0]
-print("Predicted Attrition:", "Yes (1)" if prediction == 1 else "No (0)")
+print("⚠️ Karyawan berisiko resign." if prediction == 1 else "✅ Karyawan diprediksi tidak resign.")
